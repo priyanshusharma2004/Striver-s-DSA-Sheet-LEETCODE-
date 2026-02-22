@@ -1,0 +1,28 @@
+Problem statement
+Given a string s, find the first character that repeats in the string. Return the character if found; otherwise, return None if there are no repeating characters.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= t <= 10^2
+0 <= N <= 10^3
+0 <= X <= 10^9
+Time Limit: 1 sec
+Sample Input 1:
+"hello"
+Sample Output 1:
+'l'
+Sample Input 2:
+"abcdef"
+Sample Output 2:
+None
+
+
+
+def first_repeating(s):
+    seen = set()
+    
+    for char in s:
+        if char in seen:
+            return char
+        seen.add(char)
+    
+    return None
